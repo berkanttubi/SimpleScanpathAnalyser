@@ -12,8 +12,8 @@ The process model of this program is as follows:
 
 ![Figure 2: ](https://github.com/berkanttubi/SimpleScanpathAnalyser/blob/main/process.png "Path")
 
-**1) Input : User enters the name of the file.**
-**2) Internal Processing : Graph is created according to the scanpaths similarities in the given scanpath txt file.**
+**1) Input : User enters the name of the file.**\
+**2) Internal Processing : Graph is created according to the scanpaths similarities in the given scanpath txt file.**\
 **3) Output : Prints the similiar scanpath in ASC order.**
 
 
