@@ -12,14 +12,17 @@ The process model of this program is as follows:
 
 ![Figure 2: ](https://github.com/berkanttubi/SimpleScanpathAnalyser/blob/main/process.png "Path")
 
-## 1) Input : User enters the name of the file.
-## 2) Internal Processing : Graph is created according to the scanpaths similarities in the given scanpath txt file.
-## 3) Output : Prints the similiar scanpath in ASC order.
+** 1) Input : User enters the name of the file. **
+** 2) Internal Processing : Graph is created according to the scanpaths similarities in the given scanpath txt file. **
+** 3) Output : Prints the similiar scanpath in ASC order. **
+
+
+##### Structs of the program is given below:
 
 ``` C
 
 struct graphHead{
-	int count; //Number of
+	int count; //Number of node
 	struct graphVertex *first;
 };
 
@@ -47,3 +50,23 @@ struct data{
 
 
 ```
+##### Funcitons of the program is given below:
+
+``` c
+
+struct graphHead * createGraph(); // Initialize the head of graph
+void displayGraph(struct graphHead *);
+void insertVertex(struct graphHead *, char);
+int insertArc(struct graphHead *,int,int,float);
+struct graphHead* createVertices(char *); // This function creates vertices according to the scanpaths
+void createEdges(struct graphHead *,char *); // This function create Edges according to the similarity of scanpaths
+void initializeTempScanpath(char*); // The purpose of this function initializing temporary arrays in createEdges() funtion
+int min (int,int,int); // Finds the minimum of three
+int maks (int,int); // Find maksimum of two
+float * sortTheList (float *,int); // Finds the maksimum in float list. Used for sorting the similarities of scanpahts
+int editDist(char *, char *, int , int ); // Function given in assignment
+void printSimilarScanpaths(struct graphHead *); //Prints the similar scanpaths by the order
+
+
+```
+
